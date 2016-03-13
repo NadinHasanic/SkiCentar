@@ -1,0 +1,223 @@
+* {
+	margin:0px;
+	padding:0px;
+}
+body {
+	position:relative;
+	background-image:url("images/backimg.jpg");
+	
+}
+
+/* #####   NAVIGATION   / MENI ######## */
+.navigation {
+	padding-top:50px;
+	padding-bottom:50px;
+	margin-left:auto;
+	margin-right:auto;
+	padding-left:40px;
+}
+
+.navigation ul {
+	list-style:none;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	width:70%;
+	
+}
+
+.navigation li {
+	float:left;
+	display:block;
+	width:170px;
+	height:40px;
+	text-align:center;
+	position:relative;
+	font-size:20px;
+	background-color:#9999FF;
+	border-right:1px solid white;
+	line-height:40px;
+}
+
+.navigation a {
+	text-decoration:none;
+	font-style:bold;
+	color:white;
+	display:block;
+}
+
+.navigation li :hover {
+	background-color:#4D4DFF;
+}
+
+/* END OF NAVIGATION //// treba dodat jos za dropdown meni !!!!!! */
+
+
+
+/* Sadrzaj svake stranice koju imamo sve ispod navigacije (menija)  #####################3############### */
+.pageContent {
+	width:90%;
+	margin-left:auto;
+	margin-right:auto;
+	display:block;
+	padding-top:50px;
+	height:100%;
+   /* border: 2px solid #4D94FF; */
+}
+
+/* #####################################   */
+
+
+/*  NASLOV ZA STRANICE */
+
+.pageTitle {
+	display:block;
+	font-size:50px;
+	font-style:bold;
+	margin-left:auto;
+	margin-right:auto;
+	width :150px;
+	padding-bottom:30px;
+}
+
+
+/*####################################3*/
+
+
+
+
+
+
+/*  NOVOSTI   !!!!!!!!!!!!!!!!!11 */
+
+#pageNews {
+	width:70%;
+	border: 2px solid #4D94FF;
+	margin-left:auto;
+	margin-right:auto;
+	padding-top:30px;
+	background-color:#D9DCE0;
+	margin-bottom:40px;
+}
+
+.news {
+	padding:0px 20px 50px 20px;
+}
+
+.news img {
+	width:150px;
+	height:auto;
+	float:right;
+	padding:0px 0px 20px 20px;
+}
+/*  ############################ */
+
+/* INFO !!!!!!!!!!!!!!!!!!!!!!11!!!11 */
+
+#infoTable {
+	width:70%;
+	margin-left:auto;
+	margin-right:auto;
+	border:2px solid #4D94FF;
+	background-color:#D0D4D8;
+	margin-top:40px;
+}
+
+#infoTable th {
+	height:60px;
+	font-size:25px;
+	border-right:2px solid #3B7693;
+	border-bottom:2px solid #3B7693;
+	background-color:#5CB8E6;
+}
+#infoTable td {
+	text-align:center;
+	border-right:1px solid #7E7E91;
+	border-bottom:1px solid #7E7E91;
+	height:40px;
+	width:200px;
+	padding-right:30px;
+}
+.td2 {
+	 background-color:#EBEBEF;
+}
+.td2:hover , #infoTable td:hover {
+	background-color:white;
+}
+
+/*###############################################3 */
+
+
+/*  KONTAKT FORMA !!!!!!!!!!!!!!!!!1*/
+
+#contactForm {
+	width:50%;
+	margin-left:auto;
+	margin-right:auto;
+	padding-top:50px;
+	margin-bottom:30px;
+	background-color:#EBEBEF;
+	border:4px solid #3B7693;
+}
+
+input {
+	height:30px;
+	font-size:20px;
+	line-height:30px;
+	margin-bottom:20px;
+	
+}
+
+textarea {
+	font-size:15px;
+	margin-bottom:10px;
+	margin-left:40px;
+}
+label {
+	height:30px;
+	font-size:20px;
+	line-height:30px;
+	margin-left:40px;
+}
+#button {
+	margin-left:40px;
+}
+
+/*#######################################33 */
+
+
+/* LINKOVI !!!!!!!!!!!!!!!!!!!!!!!!!1 */
+ 
+#linkoviList {
+	padding-top:120px;
+	width:60%;
+	margin-left:auto;
+	margin-right:auto;
+	list-style:none;
+}
+
+#linkoviList li {
+	padding-bottom:20px;
+	font-size:40px;
+	height : 60px;
+}
+ #linkoviList a {
+	text-decoration:none;
+	color:black;
+	
+ }
+ 
+ #linkoviList img {
+	width :50px;
+	height:50px;
+	float:right;
+	display:none;
+	padding-right:150px;
+}
+ 
+  #linkoviList a:hover{
+	color:white; text-decoration:underline;
+ }
+ #linkoviList a:hover img {
+ display:block;
+ }
