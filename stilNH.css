@@ -2,9 +2,21 @@
 	margin:0px;
 	padding:0px;
 }
+
+html{
+	margin: 0px;
+    min-height: 100%;
+    width: 100%;
+}
+
 body {
-	position:relative;
-	background-image:url("images/backimg.jpg");
+	margin: 0px;
+    min-height: 100%;
+    width: 100%;
+	background-image:url("images/backimg2.jpg");
+	background-repeat:no-repeat;
+	background-size:100% 100%;
+	
 	
 }
 
@@ -12,9 +24,7 @@ body {
 .navigation {
 	padding-top:50px;
 	padding-bottom:50px;
-	margin-left:auto;
-	margin-right:auto;
-	padding-left:40px;
+	width:100%;
 }
 
 .navigation ul {
@@ -34,7 +44,7 @@ body {
 	text-align:center;
 	position:relative;
 	font-size:20px;
-	background-color:#9999FF;
+	background-color:#4D4DFF;
 	border-right:1px solid white;
 	line-height:40px;
 }
@@ -47,7 +57,7 @@ body {
 }
 
 .navigation li :hover {
-	background-color:#4D4DFF;
+	background-color:#3B7693;
 }
 
 /* END OF NAVIGATION //// treba dodat jos za dropdown meni !!!!!! */
@@ -91,17 +101,28 @@ body {
 /*  NOVOSTI   !!!!!!!!!!!!!!!!!11 */
 
 #pageNews {
-	width:70%;
+	width:80%;
 	border: 2px solid #4D94FF;
 	margin-left:auto;
 	margin-right:auto;
 	padding-top:30px;
 	background-color:#D9DCE0;
 	margin-bottom:40px;
+	overflow:hidden;
+	overflow-y:auto;
+	height:600px;
 }
 
 .news {
 	padding:0px 20px 50px 20px;
+	height:200px;
+	width:35%;
+	overflow-y:auto;
+	float:left;
+	background-color:white;
+	margin-left:5%;
+	margin-bottom:40px;
+	min-width:300px;
 }
 
 .news img {
@@ -216,7 +237,7 @@ label {
 }
  
   #linkoviList a:hover{
-	color:white; text-decoration:underline;
+	color:#0000ff; text-decoration:underline;
  }
  #linkoviList a:hover img {
  display:block;
