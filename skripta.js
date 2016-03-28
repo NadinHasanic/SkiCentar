@@ -18,7 +18,6 @@ function valEmail(){
 	var t = reg.test(mail);
 	if (t == true){
 		document.getElementById("email").style.border = "2px solid white";
-		alert("Validan mail");
 	}
 	else {
 		document.getElementById("email").style.border = "2px solid red";
@@ -46,7 +45,6 @@ function valAdresa(){
 	var a = reg.test(adr);
 	if(a == true){ 
 		document.getElementById("adresa").style.border = "2px solid white";
-		alert("Validan adresa");
 	}
 	else{
 		document.getElementById("adresa").style.border = "2px solid red" ;
@@ -56,15 +54,15 @@ function valAdresa(){
 
 function valGrade(){
 	var t = document.getElementById("grade").value;
-	alert(t);
-	if (t > 0 || t < 6) { document.getElementById("grade").style.border = "2px solid white" ;}
+	if (t > 0 && t < 6) { document.getElementById("grade").style.border = "2px solid white" ;}
 	else {document.getElementById("grade").style.border = "2px solid red";}
-	return t;
+	
 }
 
 function valMes(){
 	var m = document.getElementById("message").value;
-	var reg = /^[A-Za-z0-9]+$/;
+	var reg = /^[A-ZČĆŽĐŠa-zčćžđš0-9]{2,}[A-ZČĆŽĐŠa-zčćžđš0-9\s\.\:\!\n\-\_\(\)\,\;]{2,}$/; /* Poruka mora poceti sa slovima ili brojem 
+		inace se moze ukucati samo par space i ostaviti prazno */
 	var r = reg.test(m);
 	if( r == true){ 	
 		document.getElementById("message").style.border = "2px solid white";
@@ -79,5 +77,10 @@ function resetValidacije(){
 	document.getElementById("adresa").style.border = "2px solid white";
 	document.getElementById("name").style.border = "2px solid white";
 	document.getElementById("email").style.border = "2px solid white";
+	document.getElementById("message").style.border = "2px solid white";
 
 }
+
+/*  ################### kraj VALIDACIJA-----------##########################3   */
+
+
