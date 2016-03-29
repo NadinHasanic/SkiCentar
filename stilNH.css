@@ -177,6 +177,37 @@ body {
 	float:right;
 	padding:0px 0px 20px 20px;
 }
+
+.newsHideTime{
+	display:none;
+}
+
+.newsTime {
+	margin-top:10px;
+	font-style:italic;
+	border:none;
+	font-size:14px;
+	width:100%;
+	text-align:left;
+}
+
+.select {
+	height:30px;
+	width:100px;
+	background-color:white;
+	border: 1px solid grey;
+	color:blue;
+}
+#odabirNews{
+	width:60%;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:60px;
+}
+#selectLAb{
+	color:blue;
+	font-size:30px;
+}
 /*  ############################ */
 
 /* INFO !!!!!!!!!!!!!!!!!!!!!!11!!!11 */
