@@ -110,12 +110,12 @@ function resetValidacije(){
 
 function setNews(){
 	var nizVremena = document.getElementsByClassName("newsHideTime");
-	nizVremena[0].value = new Date("2016-03-29 20:00:00");
-	nizVremena[1].value = new Date("2016-03-29 19:00:00");
+	nizVremena[0].value = new Date("2016-04-01 20:00:00");
+	nizVremena[1].value = new Date("2016-04-02 18:43:00");
 	nizVremena[2].value = new Date("2016-03-29 12:00:00");
 	nizVremena[3].value = new Date("2016-03-27 12:00:00");
-	nizVremena[4].value = new Date("2016-03-26 12:00:00");
-	nizVremena[5].value = new Date("2016-03-21 12:00:00");
+	nizVremena[4].value = new Date("2016-03-26 20:00:00");
+	nizVremena[5].value = new Date("2016-03-25 23:00:00");
 	nizVremena[6].value = new Date("2016-03-17 12:00:00");
 	nizVremena[7].value = new Date("2016-03-07 12:00:00");
 	nizVremena[8].value = new Date("2016-03-05 12:00:00");
@@ -133,7 +133,7 @@ function postNews(){
 	for (i = 0; i < nizPrikaza.length; i++){
 		var d = new Date (nizVremena[i].value);
 		var tad = d.getTime()/1000;
-		if((sad - tad) < 60)                               { nizPrikaza[i].value = "Novost je objavljena prije "+Math.round(sad - tad ) +" sekundi"; }
+		if((sad - tad) < 60)                               { nizPrikaza[i].value = "Novost je objavljena prije par sekundi"; }
 		if((sad - tad) < 3600 && (sad - tad) > 60 )        { nizPrikaza[i].value = "Novost je objavljena prije "+Math.round((sad - tad )/60) +" minute"; }
 		if((sad - tad) < 86400 && (sad - tad) > 3600)      { nizPrikaza[i].value = "Novost je objavljena prije "+Math.round((sad - tad )/3600) +" sata"; }
 		if((sad - tad) < 604800 && (sad - tad) > 86400 )   { nizPrikaza[i].value = "Novost je objavljena prije "+Math.round((sad - tad )/86400) +" dana"; }
@@ -143,6 +143,7 @@ function postNews(){
 		}
 		
 	}
+	valPrikazNovosti();
 }
 
 function prikaziDanas(){
@@ -153,33 +154,46 @@ function prikaziDanas(){
 	for (i = 0; i < nizNovosti.length; i++){
 		var d = new Date (nizVremena[i].value);
 		var tad = d.getTime()/1000;
-			if((sad - tad) > 86400) { 
-				nizNovosti[i].style.display = "none";
-			}
-			else {
+			if((sad - tad) < 86400 ) { 
 				nizNovosti[i].style.display = "block";
 			}
+			else {
+				nizNovosti[i].style.display = "none";
+			}
 	}
+	valPrikazNovosti();
 }
 
 function prikaziSedmica(){
+	var s = new Date();
 	var sad = new Date().getTime()/1000;
+	var sDan = s.getDay();
+		if(s.getDay() == 0) {sDan=7;}
 	var nizVremena = document.getElementsByClassName("newsHideTime");
 	var nizNovosti = document.getElementsByClassName("news");
 	var i;
 	for (i = 0; i < nizNovosti.length; i++){
 		var d = new Date (nizVremena[i].value);
-		var tad = d.getTime()/1000;
-			if((sad - tad) > 604800) { 
+		var tad = d.getTime()/1000; 
+			
+			var dan = d.getDay();
+			if(d.getDay() == 0) {dan=7;}
+			
+			if((sad - tad) < 604800 && sDan > dan  ) { 
+				nizNovosti[i].style.display = "block";
+			}
+			else{
 				nizNovosti[i].style.display = "none";
 			}
-			else {
+		if((sad - tad) < 86400 ) { 
 				nizNovosti[i].style.display = "block";
 			}
 	}
+	valPrikazNovosti();
 }
 
 function prikaziMjesec(){
+	var s = new Date();
 	var sad = new Date().getTime()/1000;
 	var nizVremena = document.getElementsByClassName("newsHideTime");
 	var nizNovosti = document.getElementsByClassName("news");
@@ -187,19 +201,36 @@ function prikaziMjesec(){
 	for (i = 0; i < nizNovosti.length; i++){
 		var d = new Date (nizVremena[i].value);
 		var tad = d.getTime()/1000;
-			if((sad - tad) > 2592000) { 
-				nizNovosti[i].style.display = "none";
-			}
-			else {
+			if((sad - tad) < 2592000 && s.getDate() >= d.getDate()) { 
 				nizNovosti[i].style.display = "block";
 			}
+			else {
+				nizNovosti[i].style.display = "none";
+			}
 	}
+	valPrikazNovosti();
 }
 
 function prikaziSve(){
 	var nizNovosti = document.getElementsByClassName("news");
 	for (i = 0; i < nizNovosti.length; i++){
 		nizNovosti[i].style.display = "block";
+	}
+	valPrikazNovosti();
+}
+
+function valPrikazNovosti(){
+	var sad = new Date().getTime()/1000;
+	var nizVremena = document.getElementsByClassName("newsHideTime");
+	var nizNovosti = document.getElementsByClassName("news");
+	var i;
+	for (i = 0; i < nizNovosti.length; i++){
+		var d = new Date (nizVremena[i].value);
+		var tad = d.getTime()/1000;
+			if((sad - tad) < 0 ) { 
+				nizNovosti[i].style.display = "none";
+			}
+			
 	}
 }
 
