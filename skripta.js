@@ -234,3 +234,57 @@ function valPrikazNovosti(){
 	}
 }
 
+
+
+
+
+
+function validirajNaslov(){
+
+	var ime = document.getElementById("naslovN").value;
+	var reg = /^[A-Z]{1}[a-zčćžđš\s]+$/;
+	var n = reg.test(ime);
+	if(n == true){ 
+		document.getElementById("naslovN").style.border = "2px solid white";
+		document.getElementById("saveNews").disabled = false;
+	}
+	else{
+		document.getElementById("naslovN").style.border = "2px solid red" ;
+	}
+	return n;
+}
+
+/*%%%%%%%%%%% spirala 3 ((((((((((((((((((((((((((((((((((((((((*/
+
+function validirajTekst(){
+	var m = document.getElementById("tekstN").value;
+	var reg = /^[A-ZČĆŽĐŠa-zčćžđš0-9]{2,}[A-ZČĆŽĐŠa-zčćžđš0-9\s\.\:\!\-\_\(\)\,\;]{2,}$/; 
+	var r = reg.test(m);
+	if( r == true){ 	
+		document.getElementById("tekstN").style.border = "2px solid white";
+		document.getElementById("saveNews").disabled = false;
+	}
+	else{
+		document.getElementById("tekstN").style.border = "2px solid red" ;
+	}
+	return r;
+}
+
+function ValidirajNewsInput(){
+	
+	var m = document.getElementById("tekstN").value;
+	var ime = document.getElementById("naslovN").value;
+	if(m == "" || ime ==""){
+		document.getElementById("saveNews").disabled = true;
+			return false;
+	}
+	else if(validirajNaslov()==false || validirajTekst()==false){
+			document.getElementById("saveNews").disabled = true;
+			return false;
+		}
+	else {
+		document.getElementById("saveNews").disabled = false;
+		return true;
+	}
+}
+
