@@ -53,7 +53,7 @@
 			<input type="text" name="username" placeholder=""  />
 			<br>
 			 <label for="password">Password </label>
-			 <input type="text"  name="password" placeholder=""  />
+			 <input type="password"  name="password" placeholder=""  />
 			 <br>
 			 <input  id="logbutton"  type="submit"  value="LOG IN" /> 
 			</form>
