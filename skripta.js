@@ -108,12 +108,12 @@ function resetValidacije(){
 
 /*  POSTAVLJANJE NOVOSTI I ODABIR NOVOSTI ZA PRIKAZ  */
 
-function setNews(){
+/*function setNews(){
 	var nizVremena = document.getElementsByClassName("newsHideTime");
-	nizVremena[0].value = new Date("2016-04-01 20:00:00");
-	nizVremena[1].value = new Date("2016-04-02 18:43:00");
-	nizVremena[2].value = new Date("2016-03-29 12:00:00");
-	nizVremena[3].value = new Date("2016-03-27 12:00:00");
+	nizVremena[0].value = new Date("2016-05-01 20:00:00");
+	nizVremena[1].value = new Date("2016-05-21 18:43:00");
+	nizVremena[2].value = new Date("2016-05-14 12:00:00");
+	nizVremena[3].value = new Date("2016-05-19 12:00:00");
 	nizVremena[4].value = new Date("2016-03-26 20:00:00");
 	nizVremena[5].value = new Date("2016-03-25 23:00:00");
 	nizVremena[6].value = new Date("2016-03-17 12:00:00");
@@ -124,8 +124,9 @@ function setNews(){
 	nizVremena[11].value = new Date("2016-01-02 12:00:00");
 
 	postNews();
-}
+}*/
 function postNews(){
+
 	var sad = new Date().getTime()/1000;
 	var nizVremena = document.getElementsByClassName("newsHideTime");
 	var nizPrikaza = document.getElementsByClassName("newsTime");
@@ -242,7 +243,7 @@ function valPrikazNovosti(){
 function validirajNaslov(){
 
 	var ime = document.getElementById("naslovN").value;
-	var reg = /^[A-Z]{1}[a-zčćžđš\s]+$/;
+	var reg = /^[A-Za-zčćžđš\s]+$/;
 	var n = reg.test(ime);
 	if(n == true){ 
 		document.getElementById("naslovN").style.border = "2px solid white";
@@ -254,7 +255,7 @@ function validirajNaslov(){
 	return n;
 }
 
-/*%%%%%%%%%%% spirala 3 ((((((((((((((((((((((((((((((((((((((((*/
+
 
 function validirajTekst(){
 	var m = document.getElementById("tekstN").value;

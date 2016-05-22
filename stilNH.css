@@ -390,3 +390,16 @@ label {
 	font-size:20px;
 	margin-left:20px;
 }
+
+#sortForm{
+	padding-top:10px;
+	padding-left:50%;
+}
+
+.sort {
+	height:30px;
+	width:150px;
+	background-color:white;
+	border: 1px solid grey;
+	color:blue;
+}

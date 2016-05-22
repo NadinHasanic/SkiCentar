@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 
-	<html>
+	<html>  
 	<head>
 	<meta charset="UTF-8">
 	<title>Ski Centar NH</title>
 	<link rel="stylesheet" type="text/css" href="stilNH.css">
 	</head>
 	
-	<body onload="setNews()">
+	<body onload="postNews()">
 		<script src="skripta.js" ></script>
 		
 		<?php
@@ -57,128 +57,48 @@
 				<button onclick="prikaziMjesec()" class="select"> Ovog mjeseca</button>
 				<button onclick="prikaziSve()" class="select"> Sve Novosti</button>
 			</div>
+			
+			<form id="sortForm" method="get">
+				<button name="sortNews" value="time"  class="sort"> Novosti po vremenu</button>
+				<button name="sortNews" value="letter"  class="sort"> Novosti abecedno</button>
+				</form>
 			<div id="pageNews">
 			
-			<p class="news" >
-				<input type="datetime" id="vapp" class="newsHideTime"  />
-				<input type="text" id="napp" class="newsTime" />
-				<img src="images/img01.jpg">
-				<br>
-				aaaa Lorem ipsum dolor sit amet, ex has tollit pertinax, in duo nibh nobis erroribus, at novum 
-				dolorem eos. Eu est nobis maiorum lobortis. Duo id laboramus assentior adversarium, ex vel
-				dicant utroque. Animal accusamus est ad, sint illum augue nec cu. Ex vel soluta voluptatum
-			 </p>
-			
-			<p class="news">
-				<input type="datetime" id="vapp" class="newsHideTime"  />
-				<input type="text" id="napp" class="newsTime" />
-				<img src="images/img01.jpg">
-				<br>
-				PPPP Ludus tractatos posidonium vim te, justo errem te sea, sit utinam facilisi cu. Sea in nullam
-				vocibus commune, eu sit sumo malis timeam. Eam admodum accusam et. Mel ut nonumy postea dolore
-				s, meis explicari id usu. Ancillae scribentur id mei. Has ad ferri nihil periculis.
-	        </p>
-			
-			<p class="news">
-				<input type="datetime" id="vapp" class="newsHideTime"  />
-				<input type="text" id="napp" class="newsTime" />
-				<img src="images/img01.jpg">
-				<br>
-				DDDD Quo omnes aliquando vituperatoribus ne, in nostro tritani usu. Case
-				dolor labitur mel et, ei option scripserit referrentur mei. An vis 
-				audiam ceteros definitiones, illud ornatus eu quo. Habeo melius legimus in ius.
-			</p>
-			
-			<p class="news">
-				<input type="datetime" id="vapp" class="newsHideTime"  />
-				<input type="text" id="napp" class="newsTime" />
-				<img src="images/img01.jpg">
-				<br>
-				cccccc Quo omnes aliquando vituperatoribus ne, in nostro tritani usu. Case
-				dolor labitur mel et, ei option scripserit referrentur mei. An vis 
-				audiam ceteros definitiones, illud ornatus eu quo. Habeo melius legimus in ius.
-			</p>
-			
-			<p class="news">
-				<input type="datetime" id="vapp" class="newsHideTime"  />
-				<input type="text" id="napp" class="newsTime" />
-				<img src="images/img01.jpg">
-				<br>
-				ggggg  Quo omnes aliquando vituperatoribus ne, in nostro tritani usu. Case
-				dolor labitur mel et, ei option scripserit referrentur mei. An vis 
-				audiam ceteros definitiones, illud ornatus eu quo. Habeo melius legimus in ius.
-			</p>
-			
-			<p class="news">
-				<input type="datetime" id="vapp" class="newsHideTime"  />
-				<input type="text" id="napp" class="newsTime" />
-				<img src="images/img01.jpg">
-				<br>
-				ggggg  Quo omnes aliquando vituperatoribus ne, in nostro tritani usu. Case
-				dolor labitur mel et, ei option scripserit referrentur mei. An vis 
-				audiam ceteros definitiones, illud ornatus eu quo. Habeo melius legimus in ius.
-			</p>
-			
-			<p class="news">
-				<input type="datetime" id="vapp" class="newsHideTime"  />
-				<input type="text" id="napp" class="newsTime" />
-				<img src="images/img01.jpg">
-				<br>
-				ggggg  Quo omnes aliquando vituperatoribus ne, in nostro tritani usu. Case
-				dolor labitur mel et, ei option scripserit referrentur mei. An vis 
-				audiam ceteros definitiones, illud ornatus eu quo. Habeo melius legimus in ius.
-			</p>
-			
-			<p class="news">
-				<input type="datetime" id="vapp" class="newsHideTime"  />
-				<input type="text" id="napp" class="newsTime" />
-				<img src="images/img01.jpg">
-				<br>
-				ggggg  Quo omnes aliquando vituperatoribus ne, in nostro tritani usu. Case
-				dolor labitur mel et, ei option scripserit referrentur mei. An vis 
-				audiam ceteros definitiones, illud ornatus eu quo. Habeo melius legimus in ius.
-			</p>
-			
-			<p class="news">
-				<input type="datetime" id="vapp" class="newsHideTime"  />
-				<input type="text" id="napp" class="newsTime" />
-				<img src="images/img01.jpg">
-				<br>
-				ggggg  Quo omnes aliquando vituperatoribus ne, in nostro tritani usu. Case
-				dolor labitur mel et, ei option scripserit referrentur mei. An vis 
-				audiam ceteros definitiones, illud ornatus eu quo. Habeo melius legimus in ius.
-			</p>
-			
-			<p class="news">
-				<input type="datetime" id="vapp" class="newsHideTime"  />
-				<input type="text" id="napp" class="newsTime" />
-				<img src="images/img01.jpg">
-				<br>
-				ggggg  Quo omnes aliquando vituperatoribus ne, in nostro tritani usu. Case
-				dolor labitur mel et, ei option scripserit referrentur mei. An vis 
-				audiam ceteros definitiones, illud ornatus eu quo. Habeo melius legimus in ius.
-			</p>
-			
-			<p class="news">
-				<input type="datetime" id="vapp" class="newsHideTime"  />
-				<input type="text" id="napp" class="newsTime" />
-				<img src="images/img01.jpg">
-				<br>
-				ggggg  Quo omnes aliquando vituperatoribus ne, in nostro tritani usu. Case
-				dolor labitur mel et, ei option scripserit referrentur mei. An vis 
-				audiam ceteros definitiones, illud ornatus eu quo. Habeo melius legimus in ius.
-			</p>
-			
-			<p class="news">
-				<input type="datetime" id="vapp" class="newsHideTime"  />
-				<input type="text" id="napp" class="newsTime" />
-				<img src="images/img01.jpg">
-				<br>
-				ggggg  Quo omnes aliquando vituperatoribus ne, in nostro tritani usu. Case
-				dolor labitur mel et, ei option scripserit referrentur mei. An vis 
-				audiam ceteros definitiones, illud ornatus eu quo. Habeo melius legimus in ius.
-			</p>
-			
+			<?php
+				
+				$listNews=explode("/*/",file_get_contents("newslist.csv"));
+				$br=count($listNews);
+				$br=$br-1;
+				
+				if(isset($_REQUEST['sortNews']) && $_REQUEST['sortNews']=="letter"){
+				sort($listNews);
+				for($i=1;$i<=$br;$i++){
+				
+						$news=explode(",",$listNews[$i]);
+						$newsN=str_replace('#',',',$news);
+							print '<p class="news">';
+							print '<input type="datetime" id="vapp" class="newsHideTime"  value="'.$newsN[2].'"  readonly/>';
+							print '<input type="text" id="napp" class="newsTime" readonly/>';
+							print '<img src="images/img01.jpg">';
+							print   $newsN[0].'<br><br>'.$newsN[1];
+							print '</p>';
+					}
+				}
+				/*  novosti su po poredene od prve(vremenski zadnja) do zadnje(vremenski prva)  pa nema potrebe da se sortiraju po vremenu  */
+				else{
+				for($i=$br-1;$i>=0;$i--){
+						$news=explode(",",$listNews[$i]);
+						$newsN=str_replace('#',',',$news);
+							print '<p class="news">';
+							print '<input type="datetime" id="vapp" class="newsHideTime"  value="'.$newsN[2].'"  readonly/>';
+							print '<input type="text" id="napp" class="newsTime" readonly/>';
+							print '<img src="images/img01.jpg">';
+							print   $newsN[0].'<br><br>'.$newsN[1];
+							print '</p>';
+					}
+				}
+
+			?>
 			
 			</div>
 		</div>

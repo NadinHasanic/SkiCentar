@@ -52,9 +52,9 @@
 				else{
 					$newsL = file("newslist.csv");
 					$txt=str_replace(',','#',$_REQUEST['tekstN']);
-					$newsTxt=str_replace(array("\n\r", "\n", "\r"), '%%', $txt);
+					$newsTxt=str_replace(array("\n\r", "\n", "\r"), ' ', $txt);
 					$date=date("Y-m-d")."T".date("H:i:s");
-					$add = $_REQUEST['naslovN'] . "," . $newsTxt ."," . $date . "**";
+					$add = $_REQUEST['naslovN'] . "," . $newsTxt ."," . $date . "/*/";
 					array_push($newsL, $add);
 					file_put_contents("newslist.csv", $newsL);
 					header("Location: indexNH.php");
